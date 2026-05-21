@@ -40,6 +40,17 @@ All data rights belong to their respective owners.
 
 ---
 
+## Methodology Notes
+
+Data was collected from the official INGV FDSN Event Web Service using historical seismic event queries for the Campi Flegrei area.
+
+The dataset includes multiple seismic catalog generations and monitoring eras. Long-term increases in recorded earthquake counts may reflect both:
+
+- changes in seismic activity,
+- improvements in seismic monitoring sensitivity and detection capabilities over time.
+
+The project is intended for educational, analytical and visualization purposes only.
+
 ## Technologies Used
 
 - Python
