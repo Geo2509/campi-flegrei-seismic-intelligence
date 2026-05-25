@@ -1,30 +1,29 @@
-# Campania Rental Intelligence Platform
+# Campi Flegrei Seismic Intelligence
 
-Real estate monitoring and rental intelligence platform focused on tourism and rental market signals in Campania, Italy.
+Open-source seismic monitoring and historical analytics project based on official INGV earthquake data.
 
-The project uses Python automation, SerpAPI, Pandas, rule-based scoring, classification logic, and dashboard-ready datasets to monitor rental opportunities and tourism-related property signals.
+The project analyzes approximately 30 years of seismic activity in the Campi Flegrei / Monte di Procida area using Python, Pandas, and Matplotlib.
 
 Main goals:
-- monitor rental and tourism-related market activity
-- aggregate structured datasets from online sources
-- filter and classify property-related signals
-- generate analytical summaries and dashboards
-- prepare content-ready datasets for reporting and social workflows
+- monitor earthquake activity
+- analyze seismic trends
+- visualize magnitude and depth patterns
+- generate historical seismic summaries
+- create analytical charts and reports
 
 ---
 
 ## What This Project Demonstrates
 
-This project demonstrates practical data automation and intelligence workflow skills.
+This project demonstrates practical data collection, cleaning, analysis, and visualization skills using official seismic data.
 
 Key skills shown:
-- collecting data from online sources using APIs and search automation
-- cleaning and structuring search results with Pandas
-- filtering duplicate and low-quality links
-- applying rule-based scoring and classification logic
-- generating CSV datasets and analytical reports
-- preparing ready-to-use content for social media workflows
-- building dashboard-ready datasets for monitoring and reporting
+- working with public scientific data sources
+- collecting earthquake events through web services
+- processing structured datasets with Pandas
+- creating yearly and monthly analytical summaries
+- visualizing seismic activity, magnitude, depth, and energy trends
+- communicating limitations clearly and responsibly
 
 ---
 
@@ -33,62 +32,54 @@ Key skills shown:
 - Python
 - Pandas
 - Requests
-- SerpAPI
+- Matplotlib
 - CSV Data Pipelines
-- Streamlit
-- Rule-Based Scoring
-- Dashboard Analytics
+- Scientific Data Analysis
 
 ---
 
 ## Workflow
 
-Search queries
+INGV seismic web service
 ↓
-Google / SerpAPI collection
+Earthquake event collection
 ↓
-Data cleaning and filtering
+Data cleaning and normalization
 ↓
-Duplicate removal
-↓
-Scoring and classification
+Historical aggregation with Pandas
 ↓
 CSV exports
 ↓
-Dashboard-ready datasets
-↓
-Content and reporting workflows
+Visualization and reporting
 
 ---
 
 ## Project Structure
 
 ```bash
-campania-rental-intelligence/
+campi-flegrei-seismic-intelligence/
 │
-├── agent.py
-├── scoring.py
-├── classifier.py
-├── post_generator.py
-├── dashboard_data.py
+├── collect_earthquakes.py
+├── analyze_earthquakes.py
 ├── requirements.txt
 ├── README.md
 │
 ├── data/
-│   ├── raw_results.csv
-│   ├── filtered_results.csv
-│   ├── scored_results.csv
-│   └── dashboard_dataset.csv
+│   └── earthquakes.csv
 │
-├── screenshots/
-│   ├── dashboard_preview.png
-│   ├── dataset_example.png
-│   ├── terminal_workflow.png
-│   └── streamlit_dashboard.png
+├── yearly_analysis.csv
+├── monthly_analysis_2020_2026.csv
+├── depth_analysis_yearly.csv
 │
-├── output/
-│   ├── generated_posts.csv
-│   └── reports.csv
+├── charts/
+│   ├── earthquake_activity_yearly.png
+│   ├── max_magnitude_yearly.png
+│   ├── seismic_energy_yearly.png
+│   ├── earthquake_activity_monthly_2020_2026.png
+│   ├── max_magnitude_monthly_2020_2026.png
+│   ├── seismic_energy_monthly_2020_2026.png
+│   ├── shallow_earthquakes_yearly.png
+│   └── avg_depth_yearly.png
 │
 └── .env
 ```
@@ -103,97 +94,81 @@ pip install -r requirements.txt
 
 ---
 
-## Environment Variables
-
-```env
-SERPAPI_API_KEY=your_api_key_here
-```
-
----
-
 ## Run Pipeline
 
-Run data collection:
+Collect earthquake data:
 
 ```bash
-python3 agent.py
+python3 collect_earthquakes.py
 ```
 
-Run scoring and classification:
+Analyze earthquake data and generate outputs:
 
 ```bash
-python3 scoring.py
-```
-
-Generate posts and reports:
-
-```bash
-python3 post_generator.py
-```
-
-Prepare dashboard datasets:
-
-```bash
-python3 dashboard_data.py
+python3 analyze_earthquakes.py
 ```
 
 ---
 
 ## Key Features
 
-- Rental market monitoring
-- Tourism-related signal tracking
-- Structured search result aggregation
-- Duplicate filtering workflows
-- Rule-based scoring system
-- Dashboard-ready CSV exports
-- Automated content preparation
+- Historical seismic event analysis
+- Structured earthquake dataset processing
+- Magnitude and depth trend analysis
+- CSV export pipelines
+- Automated analytical summaries
+- Seismic activity visualizations
 
 ---
 
-## Example Screenshots
+## Example Charts
 
-### Dashboard Preview
+### Earthquake Activity by Year
 
-![Dashboard](screenshots/dashboard_preview.png)
+![Earthquake Activity](charts/earthquake_activity_yearly.png)
 
-### Dataset Example
+### Maximum Magnitude Trends
 
-![Dataset](screenshots/dataset_example.png)
+![Magnitude Trends](charts/max_magnitude_yearly.png)
 
-### Terminal Workflow
+### Seismic Energy Release
 
-![Workflow](screenshots/terminal_workflow.png)
-
----
-
-## Business Use Cases
-
-- short-term rental market monitoring
-- tourism-oriented property research
-- real estate lead generation
-- competitor and source monitoring
-- social media content preparation
-- local market intelligence dashboards
+![Seismic Energy](charts/seismic_energy_yearly.png)
 
 ---
 
-## Responsible Use
+## Data Source
 
-This project is intended for educational, analytical, and portfolio purposes only.
+Official seismic data provided by:
 
-It does not scrape private data, does not bypass authentication, and does not collect personal information. The system works with publicly accessible search results and structured datasets.
+- INGV — Istituto Nazionale di Geofisica e Vulcanologia
+- ISIDe seismic catalog
+- FDSN Event Web Service
+
+Sources:
+- https://terremoti.ingv.it/
+- https://iside.rm.ingv.it/
+- https://webservices.ingv.it/
+
+All data rights belong to their respective owners.
+
+---
+
+## Important Note
+
+This project does not predict earthquakes and should not be considered a civil protection or forecasting tool.
+
+The project is intended for educational, analytical, and portfolio purposes only.
 
 ---
 
 ## Future Improvements
 
-- Interactive dashboards
+- Interactive seismic dashboards
 - Automated scheduled monitoring
-- Geographic rental mapping
-- Trend anomaly detection
-- Telegram notification workflows
-- Real-time dashboard updates
+- Seismic anomaly detection
+- Geographic event mapping
+- Real-time activity alerts
 
 ---
 
