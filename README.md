@@ -87,3 +87,20 @@ campi-flegrei-seismic-intelligence/
 ├── avg_depth_yearly.png
 │
 └── README.md
+```
+
+---
+
+## Example Charts
+
+### Earthquake Activity by Year
+
+![Earthquake Activity](charts/earthquake_activity_yearly.png)
+
+### Maximum Magnitude Trends
+
+![Magnitude Trends](charts/max_magnitude_yearly.png)
+
+### Seismic Energy Release
+
+![Seismic Energy](charts/seismic_energy_yearly.png)
